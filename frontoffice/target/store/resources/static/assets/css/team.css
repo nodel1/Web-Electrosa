@@ -1,0 +1,187 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estructura principal */
+.team-page {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Columna izquierda - Tormund Sand */
+.left-aside {
+    position: relative;
+    padding-right: 2rem;
+    text-align: right;
+}
+
+.left-aside::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background: #e63946;
+    opacity: 0.3;
+}
+
+.team-card {
+    display: inline-block;
+}
+
+.team-member-name {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 0.2rem 0;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-name::before {
+    content: attr(data-text);
+    position: absolute;
+    -webkit-text-stroke: 1.5px #e63946;
+    text-stroke: 1.5px #e63946;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.team-member-name::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: #e63946;
+}
+
+.team-member-position {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Columna derecha - Linux User */
+.right-aside {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.team-info-item {
+    margin-bottom: 1.5rem;
+}
+
+.team-info-title {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.team-info-detail {
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Columna central */
+.team-main-content {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.team-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-header p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .left-aside {
+        padding-right: 0;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #e63946;
+        text-align: center;
+    }
+    
+    .left-aside::after {
+        display: none;
+    }
+    
+    .team-member-name::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+    }
+    
+    .right-aside {
+        padding-left: 0;
+        padding-top: 2rem;
+        border-top: 1px solid #1a73e8;
+        text-align: center;
+    }
+    
+    .team-main-content {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .team-header h1 {
+        font-size: 2rem;
+    }
+    
+    .team-info-item {
+        margin-bottom: 1rem;
+    }
+    
+
+
+    
+}

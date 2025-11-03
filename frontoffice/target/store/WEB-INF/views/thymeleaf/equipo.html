@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      lang="es">
+    <head>
+        <title layout:title-pattern="$CONTENT_TITLE - Electrosa">Nuestro equipo - Electrosa</title>
+    <th:block layout:fragment="additional-head">
+        <link th:href="@{/static/assets/css/team.css}" rel="stylesheet">
+    </th:block>
+</head>
+<body>
+    <main layout:fragment="main-content">
+        <div class="team-container container">
+
+            <!-- Columna izquierda - Tormund Sand -->
+            <aside class="team-aside left-aside">
+                <article class="team-card">
+                    <h2 class="team-member-name">NOEL DEL RIO GONZALEZ</h2>
+                    <p class="team-member-position">Estudiante del Grado en Ingeniería Informática</p>
+                </article>
+            </aside>
+
+            <!-- Columna central - Contenido principal -->
+            <section class="team-main-content">
+                <header class="team-header">
+                    <h1 class="team-title">Nuestro equipo</h1>
+                    <p class="team-description">
+                        You always say we should never stop being curious, to always open any curiosity door we find. 
+                        Why are you keeping this curiosity door locked?
+                    </p>
+
+                    <div class="team-photo-container">
+                        <img th:src="@{/static/assets/images/team/olly-3767411.jpg}" 
+                             alt="Foto del equipo" 
+                             class="team-photo"
+                             style="max-width: 100%; height: auto;">
+                    </div>
+                </header>
+            </section>
+
+            <!-- Columna derecha - Linux User -->
+            <aside class="team-aside right-aside">
+                <div class="team-info-item">
+                    <span class="team-info-title">LINUX USER</span>
+                    <span class="team-info-detail">Slackware, Debian, Ubuntu</span>
+                </div>
+
+                <div class="team-info-item">
+                    <span class="team-info-title">GITHUB</span>
+                    <span class="team-info-detail">@nodel1</span>
+                </div>
+
+                <div class="team-info-item">
+                    <span class="team-info-title">CSS</span>
+                    <span class="team-info-detail">Nivel experto</span>
+                </div>
+
+                <div class="team-info-item">
+                    <span class="team-info-title">JAVASCRIPT</span>
+                    <span class="team-info-detail">Empezando</span>
+                </div>
+
+                <div class="team-info-item">
+                    <span class="team-info-title">CASI INGENIER@</span>
+                    <span class="team-info-detail">Universidad de La Rioja</span>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+</body>
+</html>
